@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Simpforizta Coffee — Vintage Blue Café 💙</title>
+<meta name="description" content="Simpforizta Coffee — coffee shop biru gemas bernuansa vintage estetik." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1e3a5f;
+  --ink:#223f66;
+  --blue:#3f83c8;
+  --blue-soft:#9cc7ee;
+  --sky:#dceeff;
+  --paper:#faf4e6;
+  --cream:#fffbf0;
+  --mustard:#d9a441;
+  --pink:#f2a9c4;
+  --muted:#6d88a6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;
+  background-image:radial-gradient(#d3e6f7 1.4px, transparent 1.4px);background-size:26px 26px;}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");}
+h1,h2,.serif{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.05;letter-spacing:-.5px}
+.hand{font-family:'Caveat',cursive}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:0 auto;position:relative;z-index:2}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50}
+.nav-inner{width:min(1120px,92%);margin:14px auto 0;background:var(--cream);border:2.5px solid var(--navy);border-radius:999px;display:flex;align-items:center;justify-content:space-between;padding:9px 9px 9px 18px;box-shadow:4px 4px 0 var(--navy)}
+.logo{display:flex;align-items:center;gap:11px}
+.logo-cup{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:23px;border:2.5px solid var(--navy);box-shadow:inset 0 0 0 3px var(--cream), inset 0 0 0 5px var(--blue-soft)}
+.logo b{font-family:'DM Serif Display';font-size:21px;line-height:1;display:block}
+.logo small{display:block;font-size:10px;font-weight:800;letter-spacing:2.5px;color:var(--blue)}
+.nav-links{display:flex;gap:22px;font-weight:700;font-size:14.5px}
+.nav-links a{position:relative}
+.nav-links a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;font-weight:800;font-size:15px;border:2.5px solid var(--navy);cursor:pointer;transition:.2s;font-family:'Baloo 2'}
+.btn-navy{background:var(--navy);color:var(--cream);box-shadow:3px 3px 0 var(--blue-soft)}
+.btn-navy:hover{transform:translateY(-2px) rotate(-1deg)}
+.btn-cream{background:var(--cream);box-shadow:3px 3px 0 var(--navy)}
+.cart-btn{background:var(--cream);border:2.5px solid var(--navy);border-radius:999px;padding:8px 16px;font-weight:800;cursor:pointer;font-family:'Baloo 2'}
+.cart-btn b{background:#e0507e;color:#fff;border-radius:999px;padding:1px 9px;margin-left:4px;font-size:13px}
+.hamburger{display:none;background:none;border:0;font-size:26px;cursor:pointer}
+
+/* HERO */
+.hero{padding:132px 0 0;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.est{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:var(--cream);padding:8px 18px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:2px;border:2.5px solid var(--navy);box-shadow:3px 3px 0 var(--blue-soft)}
+.hero h1{font-size:clamp(42px,5.6vw,70px);margin:18px 0 10px}
+.hero h1 em{font-style:italic;color:var(--blue)}
+.hero h1 .gemas{font-family:'Baloo 2';font-weight:800;font-size:.62em;background:#fff;border:2.5px solid var(--navy);border-radius:999px;padding:4px 16px;vertical-align:middle;box-shadow:3px 3px 0 var(--mustard);display:inline-block;transform:rotate(-3deg)}
+.hand-arrow{font-family:'Caveat';font-size:26px;color:var(--blue);transform:rotate(-4deg)}
+.brand-giant{margin:16px 0 4px;line-height:.92}
+.brand-giant .by{display:inline-block;font-family:'Baloo 2';font-weight:800;font-size:14px;letter-spacing:1px;background:#fff;border:2.5px solid var(--navy);border-radius:999px;padding:5px 14px;box-shadow:3px 3px 0 var(--mustard);transform:rotate(-2deg);margin-bottom:12px}
+.brand-giant .brand-name{font-family:'DM Serif Display';font-size:clamp(54px,8vw,106px);letter-spacing:-2px;color:var(--navy);text-shadow:4px 4px 0 #fff,8px 8px 0 var(--blue-soft)}
+.brand-giant .brand-name em{color:var(--blue)}
+.brand-giant .brand-sub{font-family:'DM Serif Display';font-style:italic;font-size:clamp(20px,3vw,32px);letter-spacing:9px;color:var(--navy);margin-top:4px}
+.hero p{color:#47648a;font-size:16.5px;line-height:1.75;max-width:480px}
+.hero-cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.hero-ticks{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.tick{background:var(--cream);border:2px dashed var(--navy);border-radius:999px;padding:7px 15px;font-weight:800;font-size:13px}
+
+/* ARCH + MUG VINTAGE */
+.stage{position:relative;display:grid;place-items:center;padding:30px 10px}
+.arch{position:absolute;width:min(400px,88%);height:480px;background:linear-gradient(180deg,#bcdcfb,#e8f3ff);border:3px solid var(--navy);border-radius:220px 220px 28px 28px;box-shadow:8px 8px 0 rgba(30,58,95,.15)}
+.arch::after{content:"";position:absolute;inset:16px;border:2px dashed rgba(30,58,95,.35);border-radius:200px 200px 18px 18px}
+.mug-wrap{position:relative;z-index:2;animation:goyang 4s ease-in-out infinite}
+@keyframes goyang{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg) translateY(-7px)}}
+.steam{position:absolute;top:-58px;font-family:'DM Serif Display';font-size:34px;color:var(--navy);opacity:0;animation:steam 2.8s infinite}
+@keyframes steam{0%{transform:translateY(12px);opacity:0}40%{opacity:.9}100%{transform:translateY(-24px);opacity:0}}
+.mug{width:250px;background:#fff;border:3.5px solid var(--navy);border-radius:26px 26px 90px 90px / 26px 26px 110px 110px;padding:26px 18px 24px;text-align:center;box-shadow:6px 6px 0 var(--navy);position:relative}
+.mug-band{position:absolute;top:64px;left:0;right:0;height:34px;background:repeating-linear-gradient(90deg,var(--blue) 0 18px,#fff 18px 28px);border-top:3px solid var(--navy);border-bottom:3px solid var(--navy);opacity:.9}
+.mug-face{font-size:56px;position:relative;z-index:1}
+.mug h3{font-family:'DM Serif Display';font-size:22px;margin-top:36px}
+.saucer{width:290px;height:26px;background:var(--navy);border-radius:50%;margin:10px auto 0;position:relative;z-index:1}
+.saucer::after{content:"☕ Simpforizta • est. 2026";position:absolute;left:50%;top:30px;transform:translateX(-50%);font-size:11px;letter-spacing:2px;font-weight:800;color:var(--navy);white-space:nowrap}
+.stamp{position:absolute;z-index:3;width:128px;height:128px;animation:spin 14s linear infinite}
+.stamp.s-top{top:0;right:2%}
+.stamp.s-bottom{bottom:6px;left:0;animation-direction:reverse;width:112px;height:112px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.polaroid{position:absolute;z-index:3;background:#fff;border:2.5px solid var(--navy);border-radius:6px;padding:8px 8px 26px;width:132px;text-align:center;font-weight:800;font-size:12px;box-shadow:4px 4px 0 var(--navy)}
+.polaroid div{font-size:40px;background:var(--sky);border-radius:4px;padding:4px}
+.p-top{top:66px;left:-6px;transform:rotate(-8deg)}
+.p-bottom{bottom:70px;right:-4px;transform:rotate(7deg)}
+
+/* TICKET MARQUEE */
+.ticket{background:var(--navy);color:var(--cream);margin:46px 0 0;padding:0;position:relative;border-top:3px solid var(--navy);border-bottom:3px solid var(--navy)}
+.ticket::before,.ticket::after{content:"";position:absolute;left:0;right:0;height:12px;background-image:radial-gradient(circle at 10px 6px, var(--paper) 8px, transparent 8.5px);background-size:26px 12px}
+.ticket::before{top:-9px}.ticket::after{bottom:-9px;transform:rotate(180deg)}
+.marquee{overflow:hidden;white-space:nowrap;padding:16px 0;font-family:'DM Serif Display';font-style:italic;font-size:19px}
+.marquee span{margin:0 20px}
+.marquee b{font-family:'Baloo 2';font-style:normal;background:var(--mustard);color:var(--navy);border-radius:999px;padding:2px 14px;font-size:15px}
+
+/* SECTIONS */
+section{padding:72px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 38px}
+.sec-head h2{font-size:clamp(32px,4vw,48px)}
+.sec-head h2 em{color:var(--blue);font-style:italic}
+.kicker{display:inline-block;background:var(--cream);border:2.5px solid var(--navy);font-weight:800;font-size:11.5px;letter-spacing:2.5px;padding:7px 18px;border-radius:999px;margin-bottom:14px;box-shadow:3px 3px 0 var(--navy)}
+.sec-head p{color:#55708f;margin-top:10px;line-height:1.7}
+.hand-note{font-family:'Caveat';font-size:24px;color:var(--blue);margin-top:8px}
+
+/* MENU VINTAGE */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.menu-card{background:var(--cream);border:3px solid var(--navy);border-radius:20px;overflow:hidden;box-shadow:5px 5px 0 var(--navy);transition:.25s;position:relative}
+.menu-card:hover{transform:translateY(-8px) rotate(-.8deg)}
+.photo{position:relative;background:linear-gradient(180deg,#cfe7ff,#eef7ff);padding:52px 18px 14px;text-align:center;border-bottom:3px solid var(--navy)}
+.photo::before,.photo::after{content:"";position:absolute;top:10px;width:64px;height:22px;background:rgba(217,164,65,.55);border:1px solid rgba(30,58,95,.2);z-index:3}
+.photo::before{left:-14px;transform:rotate(-32deg)}
+.photo::after{right:-14px;transform:rotate(32deg)}
+.photo .drink-art{display:grid;place-items:center;filter:drop-shadow(0 10px 14px rgba(30,58,95,.25))}
+.photo .drink-art svg{width:132px;height:152px}
+.no{position:absolute;top:10px;left:10px;background:var(--navy);color:var(--cream);font-family:'DM Serif Display';font-style:italic;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;border:2px dashed var(--cream);font-size:14px;z-index:4}
+.menu-body{padding:18px 20px 20px}
+.menu-body h3{font-size:23px}
+.menu-body .desc{font-size:14px;color:#5c7a9c;margin:6px 0 14px;line-height:1.65}
+.price-row{display:flex;align-items:center;justify-content:space-between;border-top:2px dashed #c9bfa8;padding-top:14px}
+.price{font-family:'DM Serif Display';font-size:22px}
+.price small{display:block;font-family:'Plus Jakarta Sans';font-size:11px;font-weight:800;letter-spacing:1.5px;color:var(--blue)}
+.add{background:var(--blue);color:#fff;border:2.5px solid var(--navy);border-radius:999px;padding:8px 18px;font-weight:800;cursor:pointer;box-shadow:2.5px 2.5px 0 var(--navy);font-family:'Baloo 2';transition:.15s}
+.add:hover{transform:scale(1.06) rotate(-2deg)}
+.badge-mini{position:absolute;top:12px;right:10px;background:var(--pink);border:2px solid var(--navy);font-size:10px;font-weight:800;padding:3px 10px;border-radius:999px;transform:rotate(5deg);z-index:4;white-space:nowrap;letter-spacing:.3px;max-width:110px;overflow:hidden;text-overflow:ellipsis}
+
+/* STORY / KENAPA */
+.postcard{background:var(--cream);border:3px solid var(--navy);border-radius:24px;box-shadow:7px 7px 0 var(--navy);overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.post-left{padding:40px 36px;border-right:3px dashed #c9bfa8}
+.post-left h2{font-size:clamp(30px,3.6vw,42px)}
+.post-left h2 em{color:var(--blue)}
+.post-left p{color:#55708f;line-height:1.75;margin-top:12px;font-size:15.5px}
+.v-list{display:grid;gap:11px;margin-top:20px}
+.v-list div{display:flex;gap:12px;align-items:center;background:#fff;border:2.5px solid var(--navy);padding:11px 14px;border-radius:14px;font-weight:700;font-size:14.5px;box-shadow:3px 3px 0 var(--sky)}
+.v-list i{width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:19px;flex-shrink:0}
+.post-right{background:var(--navy);color:#d7e8fb;padding:36px 32px;position:relative;overflow:hidden}
+.post-right::before{content:"✦ ✦ ✦";position:absolute;top:18px;right:22px;letter-spacing:4px;color:var(--mustard)}
+.stamp-box{border:2px dashed rgba(255,255,255,.4);border-radius:16px;padding:18px;margin-bottom:16px}
+.stamp-box h4{font-family:'DM Serif Display';font-style:italic;color:#fff;font-size:20px;margin-bottom:6px}
+.big-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.big-nums div{background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.2);border-radius:14px;padding:14px;text-align:center}
+.big-nums b{font-family:'DM Serif Display';font-size:26px;color:#fff;display:block}
+.big-nums small{font-size:11px;letter-spacing:1.5px;font-weight:800;color:var(--blue-soft)}
+
+/* GALERI */
+.tape-strip{display:flex;gap:18px;overflow-x:auto;padding:10px 4px 18px;scroll-snap-type:x mandatory}
+.frame{flex:0 0 230px;background:#fff;border:2.5px solid var(--navy);border-radius:10px;padding:10px 10px 34px;box-shadow:4px 4px 0 var(--navy);scroll-snap-align:start;position:relative}
+.frame:nth-child(odd){transform:rotate(-2deg)}.frame:nth-child(even){transform:rotate(2deg)}
+.frame div{font-size:56px;background:linear-gradient(180deg,#dceeff,#fff);border:2px solid var(--sky);border-radius:6px;text-align:center;padding:14px;filter:sepia(.25)}
+.frame small{display:block;text-align:center;font-family:'Caveat';font-size:20px;color:var(--navy);margin-top:6px}
+
+/* TESTI */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.testi{background:#fffdf4;border:2.5px solid var(--navy);border-radius:4px 22px 4px 22px;padding:22px;box-shadow:4px 4px 0 var(--navy);position:relative}
+.testi::before{content:"❝";position:absolute;top:-18px;left:16px;background:var(--mustard);border:2.5px solid var(--navy);width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-family:'DM Serif Display';font-size:22px}
+.testi p{font-size:14.5px;line-height:1.7;margin:10px 0 14px}
+.who{display:flex;gap:10px;align-items:center;border-top:2px dashed #d8cba6;padding-top:12px}
+.who span{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:21px;background:var(--sky);border:2px solid var(--navy)}
+
+/* ORDER */
+.contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:20px;align-items:start}
+.info{background:var(--navy);color:#cfe3fa;border-radius:22px;padding:30px;border:3px solid var(--navy);box-shadow:6px 6px 0 var(--blue-soft);position:relative;overflow:hidden}
+.info h3{font-family:'DM Serif Display';font-style:italic;color:#fff;font-size:27px}
+.info-row{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.08);border:2px dashed rgba(255,255,255,.3);padding:12px 14px;border-radius:14px;margin-top:12px;font-size:14.5px;font-weight:600}
+.coupon{margin-top:16px;background:var(--mustard);color:var(--navy);border:2.5px dashed var(--navy);border-radius:14px;padding:14px;text-align:center;font-weight:800}
+.coupon b{font-family:'DM Serif Display';font-size:22px;letter-spacing:2px}
+form{background:var(--cream);border:3px solid var(--navy);border-radius:22px;padding:26px;display:grid;gap:13px;box-shadow:6px 6px 0 var(--navy)}
+form .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{font-size:12.5px;font-weight:800;letter-spacing:.5px}
+input,select,textarea{width:100%;padding:12px 14px;border-radius:12px;border:2.5px solid var(--navy);background:#fff;font-family:inherit;font-size:15px;outline:none;margin-top:6px}
+input:focus,select:focus,textarea:focus{box-shadow:3px 3px 0 var(--sky)}
+textarea{min-height:86px;resize:vertical}
+
+footer{background:var(--navy);color:#9db9d8;padding:46px 0 22px;border-radius:28px 28px 0 0;border-top:3px solid var(--navy);position:relative;z-index:2}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:26px}
+.foot-grid h4{color:#fff;font-family:'DM Serif Display';font-style:italic;margin-bottom:10px;font-size:19px}
+.foot-grid a{display:block;padding:5px 0;font-size:14px}
+.foot-grid a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:26px;padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px}
+
+#toast{position:fixed;bottom:96px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--navy);color:var(--cream);padding:12px 22px;border-radius:999px;font-weight:800;opacity:0;transition:.3s;z-index:99;border:2.5px solid var(--cream);box-shadow:4px 4px 0 rgba(0,0,0,.3);max-width:92%;text-align:center}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.wa{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:#2f9e5f;display:grid;place-items:center;font-size:29px;border:3px solid var(--navy);box-shadow:4px 4px 0 var(--navy);z-index:60}
+.reveal{opacity:0;transform:translateY(26px);transition:.65s ease}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:920px){
+  .hero-grid,.postcard,.contact-grid{grid-template-columns:1fr}
+  .post-left{border-right:0;border-bottom:3px dashed #c9bfa8}
+  .grid-3,.testi-grid{grid-template-columns:1fr 1fr}
+  .arch{height:420px}
+  .nav-links{display:none;position:absolute;top:70px;left:4%;right:4%;background:var(--cream);border:2.5px solid var(--navy);border-radius:22px;padding:18px;flex-direction:column;gap:12px;box-shadow:4px 4px 0 var(--navy)}
+  .nav-links.open{display:flex}
+  .hamburger{display:block}
+  .nav-cta{display:none}
+}
+@media(max-width:600px){.grid-3,.testi-grid,form .row2{grid-template-columns:1fr}section{padding:54px 0}.p-top{left:0}.p-bottom{right:0}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#beranda"><div class="logo-cup">☕</div><div><b>Simpforizta</b><small>COFFEE • EST. 2026</small></div></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#beranda">Beranda</a>
+      <a href="#menu">Menu</a>
+      <a href="#cerita">Cerita</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#order">Order</a>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <button class="cart-btn" onclick="lihatKeranjang()">🛒 <b id="cartCount">0</b></button>
+      <a href="#order" class="btn btn-navy nav-cta">Pesan ☕</a>
+      <button class="hamburger" id="burger">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="beranda">
+  <div class="container hero-grid">
+    <div>
+      <div class="est">✦ EST. 2026 • BREWED WITH LOVE ✦</div>
+      <div class="brand-giant">
+        <div class="by">by.aiss presents ♡</div>
+        <h1 class="brand-name">SIMPFORIZTA<br><em>COFFEE</em></h1>
+        <div class="brand-sub">— BLUE VINTAGE CAFÉ —</div>
+      </div>
+      <h1>Ngopi <em>jadul</em> yang <span class="gemas">gemas 💙</span><br>hangatnya sampai hati.</h1>
+      <div class="hand-arrow">↳ eh, mampir dulu yuk~ ☕</div>
+      <p><b>Simpforizta Coffee</b> itu perpaduan warung kopi vintage + coffee shop gemas serba biru. Biji arabika, resep jadul, disajikan dengan cinta dan latte art beruang. 🐻</p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-navy">📖 Buka Menu Jadul</a>
+        <a href="#order" class="btn btn-cream">🛵 Pesan Antar</a>
+      </div>
+      <div class="hero-ticks">
+        <div class="tick">⭐ 4.9 — 2.300+ ulasan</div>
+        <div class="tick">🎞️ Spot vintage estetik</div>
+        <div class="tick">📻 Ada piringan hitam!</div>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="arch"></div>
+      <svg class="stamp s-top" viewBox="0 0 120 120"><defs><path id="c1" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs><circle cx="60" cy="60" r="58" fill="#d9a441" stroke="#1e3a5f" stroke-width="3"/><circle cx="60" cy="60" r="30" fill="#fffbf0" stroke="#1e3a5f" stroke-width="2.5"/><text font-size="12.5" font-weight="800" fill="#1e3a5f" letter-spacing="2"><textPath href="#c1">• SIMPFORIZTA • 100% ARABIKA </textPath></text><text x="60" y="68" text-anchor="middle" font-size="26">☕</text></svg>
+      <div class="polaroid p-top"><div>🧋</div>kopi susu jadul!</div>
+      <div class="polaroid p-bottom"><div>🐻</div>bear-art gemas</div>
+      <div class="mug-wrap">
+        <div class="steam" style="left:30%">〜</div><div class="steam" style="left:50%;animation-delay:.9s">〜</div><div class="steam" style="left:68%;animation-delay:1.7s">〜</div>
+        <div class="mug">
+          <div class="mug-face">☕</div>
+          <div style="font-weight:800;font-size:22px;letter-spacing:2px">• ᴗ •</div>
+          <div style="display:flex;justify-content:center;gap:40px;margin-top:2px"><i style="width:20px;height:12px;background:#f2a9c4;border-radius:50%;display:block"></i><i style="width:20px;height:12px;background:#f2a9c4;border-radius:50%;display:block"></i></div>
+          <div class="mug-band"></div>
+          <h3>Si Biru Manis!</h3>
+          <small style="color:var(--muted);font-weight:700">maskot vintage 💙</small>
+        </div>
+        <div class="saucer"></div>
+      </div>
+    </div>
+  </div>
+  <div class="ticket"><div class="marquee"><span>☕ KOPI TUBRUK JADUL</span><b>gemas</b><span>🧋 KOPI SUSU BIRU</span><b>vintage</b><span>🍵 MATCHA LAWAS</span><b>estetik</b><span>🧇 CROFFLE TEMPO DOELOE</span><b>manis</b></div></div>
+</header>
+
+<section id="menu">
+  <div class="container">
+    <div class="sec-head reveal"><span class="kicker">📖 MENU JADUL • NO. 01–06</span><h2>Andalan yang <em>selalu dirindu</em></h2><p>Resep lawas, sentuhan biru gemas. Semua fresh-brewed, manisnya pas kayak nostalgia. 💙</p><div class="hand-note">— pilih yang kamu suka, klik + ya~ ♡</div></div>
+    <div class="grid-3">
+      <div class="menu-card reveal"><div class="photo"><div class="no">01</div><div class="badge-mini">best seller ♡</div><div class="drink-art"><svg viewBox="0 0 132 152"><ellipse cx="66" cy="142" rx="38" ry="7" fill="#1e3a5f" opacity=".15"/><path d="M30 38 L40 132 Q41 140 66 140 Q91 140 92 132 L102 38 Z" fill="#fff" stroke="#1e3a5f" stroke-width="3.5"/><path d="M36 60 L43 128 Q44 133 66 133 Q88 133 89 128 L96 60 Z" fill="#e8b06f"/><ellipse cx="66" cy="98" rx="26" ry="30" fill="#c98d4e" opacity=".55"/><path d="M36 60 L96 60 L94 82 Q80 74 66 82 Q52 90 38 82 Z" fill="#fff7ea" stroke="#1e3a5f" stroke-width="2"/><path d="M34 52 Q66 44 98 52 L96 60 Q66 53 36 60 Z" fill="#7cc6ff" stroke="#1e3a5f" stroke-width="2.5"/><path d="M36 50 Q50 30 78 32 Q92 33 96 50 Q66 43 36 50" fill="#fff" stroke="#1e3a5f" stroke-width="3"/><rect x="60" y="8" width="9" height="30" rx="4" fill="#e0507e" stroke="#1e3a5f" stroke-width="2.5" transform="rotate(8 64 23)"/><circle cx="52" cy="118" r="5" fill="#4a2c17"/><circle cx="64" cy="122" r="5" fill="#4a2c17"/><circle cx="76" cy="117" r="5" fill="#4a2c17"/><circle cx="58" cy="128" r="5" fill="#4a2c17"/><circle cx="71" cy="129" r="5" fill="#4a2c17"/><circle cx="56" cy="92" r="3.5" fill="#1e3a5f"/><circle cx="76" cy="92" r="3.5" fill="#1e3a5f"/><path d="M59 102 Q66 108 73 102" stroke="#1e3a5f" stroke-width="2.5" fill="none" stroke-linecap="round"/><ellipse cx="48" cy="99" rx="5" ry="3.5" fill="#f2a9c4"/><ellipse cx="84" cy="99" rx="5" ry="3.5" fill="#f2a9c4"/><path d="M42 70 L44 110" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".5"/></svg></div></div><div class="menu-body"><h3>Kopi Susu Biru Jadul</h3><p class="desc">Signature! Espresso + susu + gula aren + krim biru ala Simpforizta.</p><div class="price-row"><div class="price">22rb<small>HOT / ICE</small></div><button class="add" onclick="tambah('Kopi Susu Biru Jadul')">+ Add</button></div></div></div>
+      <div class="menu-card reveal"><div class="photo"><div class="no">02</div><div class="badge-mini" style="background:#9cc7ee">vintage ✦</div><div class="drink-art"><svg viewBox="0 0 132 152"><ellipse cx="62" cy="138" rx="42" ry="8" fill="#1e3a5f" opacity=".15"/><ellipse cx="62" cy="130" rx="44" ry="10" fill="#fff" stroke="#1e3a5f" stroke-width="3"/><path d="M28 52 L34 122 Q35 132 62 132 Q89 132 90 122 L96 52 Z" fill="#3f83c8" stroke="#1e3a5f" stroke-width="3.5"/><path d="M28 66 L96 66 L95 78 L29 78 Z" fill="#fff" stroke="#1e3a5f" stroke-width="2.5"/><ellipse cx="62" cy="52" rx="34" ry="10" fill="#4a2c17" stroke="#1e3a5f" stroke-width="3"/><ellipse cx="62" cy="52" rx="24" ry="6" fill="#6b4226"/><ellipse cx="55" cy="51" rx="8" ry="3" fill="#8a5a33" opacity=".8"/><path d="M90 70 Q112 72 108 94 Q104 114 86 112" fill="none" stroke="#1e3a5f" stroke-width="5" stroke-linecap="round"/><path d="M50 30 q4 -8 0 -16 M66 30 q4 -8 0 -16 M80 32 q4 -8 0 -16" stroke="#1e3a5f" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".55"/><circle cx="50" cy="98" r="3.5" fill="#fff"/><circle cx="74" cy="98" r="3.5" fill="#fff"/><path d="M55 108 Q62 113 69 108" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/><ellipse cx="16" cy="120" rx="7" ry="9" fill="#6b4226" stroke="#1e3a5f" stroke-width="2" transform="rotate(-20 16 120)"/><ellipse cx="110" cy="122" rx="7" ry="9" fill="#6b4226" stroke="#1e3a5f" stroke-width="2" transform="rotate(20 110 122)"/></svg></div></div><div class="menu-body"><h3>Tubruk Tempo Doeloe</h3><p class="desc">Kopi tubruk robusta + arabika, diseduh manual, pekatnya nendang.</p><div class="price-row"><div class="price">18rb<small>CLASSIC</small></div><button class="add" onclick="tambah('Tubruk Tempo Doeloe')">+ Add</button></div></div></div>
+      <div class="menu-card reveal"><div class="photo"><div class="no">03</div><div class="badge-mini" style="background:#fff">baru ♡</div><div class="drink-art"><svg viewBox="0 0 132 152"><ellipse cx="66" cy="142" rx="36" ry="7" fill="#1e3a5f" opacity=".15"/><path d="M36 36 L44 132 Q45 140 66 140 Q87 140 88 132 L96 36 Z" fill="#eaf6ff" stroke="#1e3a5f" stroke-width="3.5" opacity=".95"/><path d="M40 80 L46 130 Q47 135 66 135 Q85 135 86 130 L92 80 Z" fill="#7fbf5f"/><path d="M39 58 L93 58 L92 82 L40 82 Z" fill="#fffdf4"/><path d="M38 40 L94 40 L93 60 L39 60 Z" fill="#5aa9e6" stroke="#1e3a5f" stroke-width="2"/><rect x="48" y="88" width="14" height="14" rx="3" fill="#fff" opacity=".6" transform="rotate(15 55 95)"/><rect x="68" y="100" width="12" height="12" rx="3" fill="#fff" opacity=".6" transform="rotate(-12 74 106)"/><path d="M36 36 L96 36 L94 46 L38 46 Z" fill="#fff" stroke="#1e3a5f" stroke-width="3"/><rect x="61" y="10" width="8" height="28" rx="4" fill="#2f9e5f" stroke="#1e3a5f" stroke-width="2.5"/><path d="M84 24 q14 -4 18 8 q-12 6 -18 -8" fill="#2f9e5f" stroke="#1e3a5f" stroke-width="2.5"/><circle cx="57" cy="112" r="3.2" fill="#1e3a5f"/><circle cx="75" cy="112" r="3.2" fill="#1e3a5f"/><path d="M60 120 Q66 125 72 120" stroke="#1e3a5f" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></div></div><div class="menu-body"><h3>Matcha Lawas Biru</h3><p class="desc">Matcha premium + susu + butterfly pea. Cantik + calming.</p><div class="price-row"><div class="price">25rb<small>NON-COFFEE</small></div><button class="add" onclick="tambah('Matcha Lawas Biru')">+ Add</button></div></div></div>
+      <div class="menu-card reveal"><div class="photo"><div class="no">04</div><div class="badge-mini" style="background:#d9a441">hemat!</div><div class="drink-art"><svg viewBox="0 0 132 152"><ellipse cx="66" cy="136" rx="44" ry="9" fill="#1e3a5f" opacity=".15"/><ellipse cx="66" cy="128" rx="46" ry="11" fill="#fff" stroke="#1e3a5f" stroke-width="3"/><rect x="30" y="86" width="72" height="26" rx="10" fill="#e8a55c" stroke="#1e3a5f" stroke-width="3"/><circle cx="42" cy="92" r="4" fill="#c97e2e"/><circle cx="56" cy="92" r="4" fill="#c97e2e"/><circle cx="70" cy="92" r="4" fill="#c97e2e"/><circle cx="84" cy="92" r="4" fill="#c97e2e"/><circle cx="49" cy="103" r="4" fill="#c97e2e"/><circle cx="63" cy="103" r="4" fill="#c97e2e"/><circle cx="77" cy="103" r="4" fill="#c97e2e"/><path d="M32 88 Q48 80 66 88 Q84 96 100 86" stroke="#5aa9e6" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M40 82 Q54 74 70 81 Q86 88 94 80" stroke="#4a2c17" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="66" cy="58" r="20" fill="#fff7ea" stroke="#1e3a5f" stroke-width="3"/><path d="M52 52 Q60 44 72 50" stroke="#e0507e" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="66" cy="38" r="7" fill="#e0507e" stroke="#1e3a5f" stroke-width="2.5"/><path d="M66 31 v-8" stroke="#2f9e5f" stroke-width="3" stroke-linecap="round"/><circle cx="58" cy="58" r="2.6" fill="#1e3a5f"/><circle cx="74" cy="58" r="2.6" fill="#1e3a5f"/><path d="M61 64 Q66 68 71 64" stroke="#1e3a5f" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></div></div><div class="menu-body"><h3>Croffle Jadul Coklat</h3><p class="desc">Croissant-waffle renyah, coklat biru lumer + taburan kacang.</p><div class="price-row"><div class="price">20rb<small>SNACK</small></div><button class="add" onclick="tambah('Croffle Jadul')">+ Add</button></div></div></div>
+      <div class="menu-card reveal"><div class="photo"><div class="no">05</div><div class="badge-mini" style="background:#9cc7ee">segar ✦</div><div class="drink-art"><svg viewBox="0 0 132 152"><ellipse cx="66" cy="142" rx="34" ry="7" fill="#1e3a5f" opacity=".15"/><path d="M44 44 Q40 90 48 132 Q49 139 66 139 Q83 139 84 132 Q92 90 88 44 Z" fill="#bfe6ff" stroke="#1e3a5f" stroke-width="3.5"/><path d="M45 60 Q43 95 49 130 L83 130 Q89 95 87 60 Q80 100 66 102 Q52 100 45 60" fill="#2e9bff" opacity=".85"/><circle cx="58" cy="110" r="4" fill="#fff" opacity=".8"/><circle cx="70" cy="120" r="3" fill="#fff" opacity=".8"/><circle cx="74" cy="96" r="2.5" fill="#fff" opacity=".8"/><circle cx="60" cy="88" r="2" fill="#fff" opacity=".8"/><ellipse cx="88" cy="72" rx="14" ry="14" fill="#ffe66d" stroke="#1e3a5f" stroke-width="3"/><path d="M88 60 v24 M76 72 h24" stroke="#1e3a5f" stroke-width="2"/><path d="M52 44 L44 14" stroke="#e0507e" stroke-width="7" stroke-linecap="round"/><path d="M44 14 l8 0" stroke="#1e3a5f" stroke-width="3" stroke-linecap="round"/><path d="M50 52 q-12 -2 -14 10 q10 6 14 -10" fill="#2f9e5f" stroke="#1e3a5f" stroke-width="2.5"/><circle cx="58" cy="118" r="3" fill="#1e3a5f"/><circle cx="74" cy="118" r="3" fill="#1e3a5f"/><path d="M61 125 Q66 129 71 125" stroke="#1e3a5f" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></div></div><div class="menu-body"><h3>Ocean Soda Lawas</h3><p class="desc">Soda butterfly pea + lemon + mint. Segar kayak angin sore.</p><div class="price-row"><div class="price">18rb<small>NON-COFFEE</small></div><button class="add" onclick="tambah('Ocean Soda Lawas')">+ Add</button></div></div></div>
+      <div class="menu-card reveal"><div class="photo"><div class="no">06</div><div class="badge-mini">gemas ♡</div><div class="drink-art"><svg viewBox="0 0 132 152"><ellipse cx="66" cy="136" rx="44" ry="9" fill="#1e3a5f" opacity=".15"/><ellipse cx="66" cy="126" rx="46" ry="12" fill="#fff" stroke="#1e3a5f" stroke-width="3"/><ellipse cx="46" cy="100" rx="22" ry="20" fill="#e8a55c" stroke="#1e3a5f" stroke-width="3"/><ellipse cx="86" cy="100" rx="22" ry="20" fill="#e8a55c" stroke="#1e3a5f" stroke-width="3"/><ellipse cx="66" cy="84" rx="24" ry="22" fill="#f0b96e" stroke="#1e3a5f" stroke-width="3"/><circle cx="58" cy="78" r="4.5" fill="#5aa9e6" stroke="#1e3a5f" stroke-width="1.5"/><circle cx="72" cy="82" r="4.5" fill="#5aa9e6" stroke="#1e3a5f" stroke-width="1.5"/><circle cx="62" cy="92" r="4.5" fill="#4a2c17"/><circle cx="40" cy="96" r="3.5" fill="#4a2c17"/><circle cx="52" cy="104" r="3.5" fill="#4a2c17"/><circle cx="82" cy="96" r="3.5" fill="#5aa9e6" stroke="#1e3a5f" stroke-width="1"/><circle cx="92" cy="104" r="3.5" fill="#4a2c17"/><circle cx="60" cy="84" r="2.6" fill="#1e3a5f"/><circle cx="72" cy="84" r="2.6" fill="#1e3a5f"/><path d="M61 91 Q66 95 71 91" stroke="#1e3a5f" stroke-width="2.2" fill="none" stroke-linecap="round"/><ellipse cx="53" cy="88" rx="4" ry="2.8" fill="#f2a9c4"/><ellipse cx="79" cy="88" rx="4" ry="2.8" fill="#f2a9c4"/></svg></div></div><div class="menu-body"><h3>Kukis Biru Nenek</h3><p class="desc">Resep kukis jadul + choco biru lumer. Satu kurang, tiga pas!</p><div class="price-row"><div class="price">15rb<small>/3 PCS</small></div><button class="add" onclick="tambah('Kukis Biru Nenek')">+ Add</button></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="cerita" style="padding-top:0">
+  <div class="container">
+    <div class="postcard reveal">
+      <div class="post-left">
+        <span class="kicker">✦ CERITA KAMI</span>
+        <h2>Warung rasa <em>nostalgia,</em> hati rasa bahagia.</h2>
+        <p>Simpforizta lahir dari kangen suasana kopi rumah nenek — cangkir enamel biru, radio lawas, obrolan hangat. Kami bungkus nostalgia itu dengan gaya gemas biar anak muda juga jatuh cinta.</p>
+        <div class="v-list">
+          <div><i>🫘</i> Biji disangrai sendiri tiap minggu</div>
+          <div><i>📻</i> Interior vintage: radio, kaset & vespa biru</div>
+          <div><i>🐻</i> Latte art beruang gratis tiap pembelian</div>
+          <div><i>💸</i> Mulai 15rb — pelajar auto aman</div>
+        </div>
+      </div>
+      <div class="post-right">
+        <div class="stamp-box"><h4>“Rasanya kayak pulang ke rumah.”</h4><p style="font-size:14px;line-height:1.7">— kata 9 dari 10 pelanggan kami. Yang 1 lagi nambah order. ☕</p></div>
+        <div class="big-nums">
+          <div><b>2.3k+</b><small>ULASAN ★4.9</small></div>
+          <div><b>50+</b><small>VARIAN MENU</small></div>
+          <div><b>7</b><small>HARI BUKA</small></div>
+        </div>
+        <p class="hand" style="font-size:24px;color:var(--mustard);margin-top:16px">— salam hangat, Ai & keluarga biru 💙</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galeri" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal"><span class="kicker">🎞️ GALERI ESETIK</span><h2>Sudut <em>biru-biru</em> favorit</h2><p class="hand-note">geser ke samping~ semua spot boleh buat foto 📸</p></div>
+    <div class="tape-strip reveal">
+      <div class="frame"><div>🛵</div><small>vespa biru depan toko</small></div>
+      <div class="frame"><div>📻</div><small>radio jadul + kaset</small></div>
+      <div class="frame"><div>🪟</div><small>jendela arch estetik</small></div>
+      <div class="frame"><div>🧸</div><small>pojok boneka gemas</small></div>
+      <div class="frame"><div>📚</div><small>rak buku & komik</small></div>
+      <div class="frame"><div>☕</div><small>cangkir enamel biru</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimoni" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal"><span class="kicker">♡ KATA MEREKA</span><h2>Surat cinta untuk <em>Simpforizta</em></h2></div>
+    <div class="testi-grid">
+      <div class="testi reveal"><div>⭐⭐⭐⭐⭐</div><p>“ cafenya kayak masuk lorong waktu tapi tetap gemas! Kopi susu birunya juara, tempatnya adem banget 💙 ”</p><div class="who"><span>🌷</span><div><b>Salsa</b><small style="color:var(--muted)">langganan tiap sabtu</small></div></div></div>
+      <div class="testi reveal"><div>⭐⭐⭐⭐⭐</div><p>“ Tubruknya pekat kayak kopi bapak-bapak, tapi disajiin cakep + ada bear-art. Nongkrong 4 jam gak kerasa ☕ ”</p><div class="who"><span>🧸</span><div><b>Raka</b><small style="color:var(--muted)">tim nugas lembur</small></div></div></div>
+      <div class="testi reveal"><div>⭐⭐⭐⭐⭐</div><p>“ Tiap sudut vintage + biru, feed IG auto rapi! Croffle + ocean soda wajib sepaket sih 🧇 ”</p><div class="who"><span>🍓</span><div><b>Nadia</b><small style="color:var(--muted)">food vlogger</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="order" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal"><span class="kicker">✉️ ORDER & MAMPIR</span><h2>Kirim <em>pesan manis</em> yuk~</h2><p>Isi form, pesanan langsung disiapkan. Atau mampir, pintunya selalu terbuka! 💙</p></div>
+    <div class="contact-grid">
+      <div class="info reveal">
+        <h3>Rumah Biru Simpforizta</h3>
+        <p style="font-size:14.5px;margin-top:6px">Jl. Kenangan Biru No. 22, Jakarta — cari cat biru + vespa lawas! 🛵</p>
+        <div class="info-row">🕗 Senin – Minggu • 08.00 – 22.00</div>
+        <div class="info-row">📞 +62 812-2222-8899 (WA fast respon!)</div>
+        <div class="info-row">📸 @simpforizta.coffee</div>
+        <div class="coupon">🎟️ KUPON: <b>BIRUMANIS</b><br><small>diskon 15% tiap Selasa & Jumat!</small></div>
+      </div>
+      <form id="orderForm" class="reveal">
+        <div class="row2">
+          <div><label>Nama kamu ♡<input required placeholder="cth: Acha"></label></div>
+          <div><label>No. WA ✦<input required placeholder="08xx..."></label></div>
+        </div>
+        <div><label>Pilih menu ☕<select id="menuPilih"><option>Kopi Susu Biru Jadul — 22rb</option><option>Tubruk Tempo Doeloe — 18rb</option><option>Matcha Lawas Biru — 25rb</option><option>Croffle Jadul Coklat — 20rb</option><option>Ocean Soda Lawas — 18rb</option><option>Kukis Biru Nenek — 15rb</option></select></label></div>
+        <div class="row2">
+          <div><label>Jumlah<input type="number" min="1" value="1" id="jml"></label></div>
+          <div><label>Gula<select><option>Pas kayak nostalgia</option><option>Less sugar</option><option>Manis kayak kamu ♡</option></select></label></div>
+        </div>
+        <div><label>Pesan buat barista ✍️<textarea placeholder="cth: latte art beruang ya kak 🐻"></textarea></label></div>
+        <button class="btn btn-navy" type="submit" style="justify-content:center">✨ Pesan Sekarang ✨</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="color:#fff"><div class="logo-cup">☕</div><div><b style="color:#fff">Simpforizta</b><small>COFFEE • EST. 2026</small></div></div>
+        <p style="margin-top:10px;font-size:14px;line-height:1.7">Vintage di hati, gemas di rasa. 💙 Disangrai & diseduh dengan cinta di Indonesia.</p>
+      </div>
+      <div><h4>Menu Jadul</h4><a href="#menu">🧋 Kopi Susu Biru</a><a href="#menu">☕ Tubruk Doeloe</a><a href="#menu">🍪 Kukis Nenek</a></div>
+      <div><h4>Rumah Biru</h4><a href="#cerita">Cerita Kami</a><a href="#galeri">Galeri</a><a href="#order">Order & Lokasi</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Simpforizta Coffee 💙 • by.aiss</span><span>dibuat dengan ☕ + nostalgia</span></div>
+    <div style="text-align:center;margin-top:22px;opacity:.22;font-family:'DM Serif Display';font-size:clamp(48px,10vw,120px);line-height:.9;color:#fff;white-space:nowrap;overflow:hidden">SIMPFORIZTA</div>
+    <div style="text-align:center;font-weight:800;letter-spacing:4px;font-size:13px;opacity:.6">BY.AISS • BLUE VINTAGE CAFÉ • EST. 2026</div>
+  </div>
+</footer>
+
+<div id="toast">💙 Masuk keranjang!</div>
+<a class="wa" href="https://wa.me/6281222228899?text=Hai%20Simpforizta%20Coffee!%20Aku%20mau%20pesan%20dong%20💙" target="_blank">💬</a>
+
+<script>
+let cart = [];
+document.getElementById('burger').onclick = () => document.getElementById('navLinks').classList.toggle('open');
+document.querySelectorAll('.nav-links a').forEach(a => a.onclick = () => document.getElementById('navLinks').classList.remove('open'));
+function tambah(nama){
+  cart.push(nama);
+  document.getElementById('cartCount').textContent = cart.length;
+  showToast('💙 ' + nama + ' masuk keranjang!');
+}
+function lihatKeranjang(){
+  showToast(cart.length ? ('🛒 Keranjang ('+cart.length+'): ' + cart.join(', ')) : '🛒 Keranjang masih kosong, yuk jajan! 🧋');
+}
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(window._tt);
+  window._tt = setTimeout(()=>t.classList.remove('show'), 2400);
+}
+document.getElementById('orderForm').addEventListener('submit', e => {
+  e.preventDefault();
+  showToast('✨ Yeay! ' + document.getElementById('jml').value + 'x ' + document.getElementById('menuPilih').value.split(' — ')[0] + ' lagi diseduh penuh cinta 🐻💙');
+  e.target.reset();
+});
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} }), {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
